@@ -61,8 +61,13 @@ Localization
         #autoLOC_Trajectories_ms = m/s
         #autoLOC_Trajectories_km = km
     }
+<<<<<<< HEAD
+    fr-fr
+    {
+=======
         fr-fr
     {   
+>>>>>>> ccaff26ecc583bd984d5a1523f44e842bf5e36d2
 	    #autoLOC_Trajectories_Title = Trajectoires
 	    #autoLOC_Trajectories_ModLoadError = Il y a eu un problème lors du chargement des mods, vérifiez votre fichier journal pour plus d'informations ou appuyez sur [Mod-F12]
 	    #autoLOC_Trajectories_AppButtonTooltip = Clic gauche pour activer/désactiver la "trajectoire". Clic droit pour ouvrir/fermer la fenêtre de l'interface graphique (GUI).
