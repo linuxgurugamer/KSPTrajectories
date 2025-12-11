@@ -1,5 +1,8 @@
 Changelog
 
+2.4.5.4
+    Updated README.md with dependencies
+
 2.4.5.3
 	Thanks to github user @Tuupertunut for these fixes
 		Fix wrong trajectory after timewarp/loading in FAR model

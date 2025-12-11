@@ -55,6 +55,17 @@ Requirements
 - ModuleManager 3.0.0+
 
 - For KSP 1.3.1 to 1.7.2, Trajectories can be built from the *backport* branch click [here](CONTRIBUTING.md#backports-for-ksp-1.3.1+) for more information.
+
+----
+
+Dependencies
+------------
+
+- ToolbarController - https://spacedock.info/mod/1931/ToolbarController
+- ClickThroughBlocker - https://spacedock.info/mod/1689/Click Through Blocker
+- SpaceTuxLibraries - https://spacedock.info/mod/2210/SpaceTux Library
+- ModuleManager - https://github.com/sarbian/ModuleManager
+
 ----
 
 Installation
