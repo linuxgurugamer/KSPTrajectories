@@ -1,8 +1,8 @@
 {
   "NAME": "Trajectories",
-  "URL": "http://ksp.spacetux.net/avc/Trajectories",
+  "URL": "https://raw.githubusercontent.com/linuxgurugamer/KSPTrajectories/refs/heads/master/Trajectories.version",
   "DOWNLOAD": "https://spacedock.info/mod/396/Trajectories",
-  "CHANGE_LOG_URL": "https://github.com/linuxgurugamer/KSPTrajectories/releases",
+  "CHANGE_LOG_URL": "https://github.com/linuxgurugamer/KSPTrajectories/blob/master/CHANGELOG.md",
   "VERSION": {
     "MAJOR": 2,
     "MINOR": 4,

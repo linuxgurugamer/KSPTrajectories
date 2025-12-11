@@ -2,6 +2,7 @@ Changelog
 
 2.4.5.4
     Updated README.md with dependencies
+    Updated version file to use github for new version info
 
 2.4.5.3
 	Thanks to github user @Tuupertunut for these fixes
