@@ -44,28 +44,77 @@ namespace Trajectories
         }
 
         ///<summary> Writes a message to the log with 'Trajectories' appended to the message </summary>
-        internal static void Log(string message, params object[] param) => LGG_Log.Info(string.Format(message, param)); 
+        //internal static void Log(string message, params object[] param) => LGG_Log.Info(string.Format(message, param));
+        internal static void Log(string message, params object[] param)
+        {
+
+            RegisterToolbar.CheckLog();
+            if (param != null && param.Length > 0)
+            {
+                LGG_Log.Info(string.Format(message, param));
+            }
+            else
+                LGG_Log.Info(message);
+        }
 
         ///<summary> Writes a warning message to the log with 'Trajectories' appended to the message </summary>
-        internal static void LogWarning(string message, params object[] param) => LGG_Log.Warn( string.Format(message, param));
+        internal static void LogWarning(string message, params object[] param)
+        {
+            RegisterToolbar.CheckLog();
+
+            //LGG_Log.Warn(string.Format(message, param));
+            if (param != null && param.Length > 0)
+            {
+                LGG_Log.Warn(string.Format(message, param));
+            }
+            else
+                LGG_Log.Warn(message);
+        }
 
         ///<summary> Writes an error message to the log with 'Trajectories' appended to the message </summary>
-        internal static void LogError(string message, params object[] param) => LGG_Log.Error(string.Format(message, param));
+        internal static void LogError(string message, params object[] param)
+        {
+            RegisterToolbar.CheckLog();
+
+            //LGG_Log.Error(string.Format(message, param));
+            if (param != null && param.Length > 0)
+            {
+                LGG_Log.Error(string.Format(message, param));
+            }
+            else
+                LGG_Log.Error(message);
+        }
 
         ///<summary> Writes a debug message to the log with 'Trajectories' and stack trace info appended to the message </summary>
         [Conditional("DEBUG")]
         internal static void DebugLog(string message, params object[] param)
         {
+            RegisterToolbar.CheckLog();
+
             StackTrace stackTrace = new StackTrace();
-            LGG_Log.Debug(string.Format("Debug: {0} - {1}",
-                stackTrace.GetFrame(1).GetMethod().ReflectedType.Name,
-                stackTrace.GetFrame(1).GetMethod().Name, string.Format(message, param)));
+            //LGG_Log.Debug(string.Format("Debug: {0} - {1}",
+            //    stackTrace.GetFrame(1).GetMethod().ReflectedType.Name,
+            //    stackTrace.GetFrame(1).GetMethod().Name, string.Format(message, param)));
+
+            if (param != null && param.Length > 0)
+            {
+                LGG_Log.Debug(string.Format("Debug: {0} - {1}",
+                    stackTrace.GetFrame(1).GetMethod().ReflectedType.Name,
+                    stackTrace.GetFrame(1).GetMethod().Name, string.Format(message, param)));
+            }
+            else
+                LGG_Log.Debug(string.Format("Debug: {0} - {1}",
+                    stackTrace.GetFrame(1).GetMethod().ReflectedType.Name,
+                    stackTrace.GetFrame(1).GetMethod().Name, message, param));
+
         }
 
         ///<summary> Writes a debug warning message to the log with 'Trajectories' and stack trace info appended to the message </summary>
         [Conditional("DEBUG")]
         internal static void DebugLogWarning(string message, params object[] param)
         {
+            RegisterToolbar.CheckLog();
+
             StackTrace stackTrace = new StackTrace();
            LGG_Log.Warn(string.Format("Warning: {0}.{1} - {2}",
                 stackTrace.GetFrame(1).GetMethod().ReflectedType.Name,
@@ -76,6 +125,8 @@ namespace Trajectories
         [Conditional("DEBUG")]
         internal static void DebugLogError(string message, params object[] param)
         {
+            RegisterToolbar.CheckLog();
+
             StackTrace stackTrace = new StackTrace();
             LGG_Log.Error(string.Format("Error: {0}.{1 - {2}",
                 stackTrace.GetFrame(1).GetMethod().ReflectedType.Name,

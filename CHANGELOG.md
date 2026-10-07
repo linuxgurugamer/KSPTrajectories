@@ -1,5 +1,8 @@
 Changelog
 
+2.4.5.5
+    Fixed issue with logging code causing Nullrefs
+
 2.4.5.4
     Updated README.md with dependencies
     Updated version file to use github for new version info
