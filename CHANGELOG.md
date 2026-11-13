@@ -1,5 +1,9 @@
 Changelog
 
+2.4.5.6
+    Thanks to github user @lhervier for this:
+        Fix missing toolbar button: RegisterToolbar.Start must not be static
+
 2.4.5.5
     Fixed issue with logging code causing Nullrefs
 
