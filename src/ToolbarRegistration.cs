@@ -8,7 +8,7 @@ namespace Trajectories
     {
 
         static public KSP_Log.Log LGG_Log = null;
-        static public void Start()
+        public void Start()
         {
             Debug.Log("[Trajectories] Registering Toolbar");
             ToolbarControl.RegisterMod(AppLauncherButton.MODID, AppLauncherButton.MODNAME);
